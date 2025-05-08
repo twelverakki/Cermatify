@@ -1,0 +1,44 @@
+/* Mengatur gaya untuk body */
+body {
+    font-family: Arial, sans-serif;   /* Menggunakan font Arial */
+    background-color: #f0f0f0;       /* Warna latar belakang abu-abu terang */
+    margin: 0;                        /* Menghapus margin default */
+    padding: 2rem;                    /* Memberikan jarak di sekitar konten */
+    color: #333;                      /* Warna teks abu-abu gelap */
+}
+
+/* Mengatur gaya untuk judul utama */
+h1 {
+    color: #2e8b57;                  /* Warna hijau untuk judul */
+    text-align: center;               /* Meratakan teks di tengah */
+}
+
+/* Mengatur gaya untuk form */
+form {
+    max-width: 400px;                 /* Lebar maksimum formulir */
+    margin: 0 auto;                   /* Membuat form berada di tengah */
+    padding: 20px;
+    background-color: #fff;           /* Latar belakang putih untuk form */
+    border-radius: 8px;               /* Membulatkan sudut form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada form */
+}
+
+/* Mengatur gaya untuk input dan tombol */
+input, button {
+    width: 100%;                      /* Membuat input dan tombol mengisi lebar form */
+    padding: 10px;                    /* Memberikan jarak dalam elemen */
+    margin: 10px 0;                   /* Memberikan jarak antar elemen */
+    border: 1px solid #ccc;           /* Border abu-abu pada elemen */
+    border-radius: 4px;               /* Membulatkan sudut input dan tombol */
+}
+
+/* Mengatur warna untuk tombol */
+button {
+    background-color: #4CAF50;        /* Warna latar belakang hijau */
+    color: white;                     /* Warna teks putih */
+    cursor: pointer;                  /* Menampilkan kursor pointer saat hover */
+}
+
+button:hover {
+    background-color: #45a049;        /* Warna hijau lebih gelap saat hover */
+}
