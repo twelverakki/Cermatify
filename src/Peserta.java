@@ -23,7 +23,7 @@ public class Peserta {
     // Setiap kali soal dijawab, soal baru di-generate
     public void tambahJumlahPengujian() {
         this.jumlahPengujian++;
-        this.soal = new Soal(new ArrayList<>(this.grandSoal));  // Soal baru dihasilkan dari grand soal yang sama
+        this.soal = new Soal(new ArrayList<>(this.grandSoal));  // Soal baru yang dihasilkan dari grand soal yang sama
     }
 
     public boolean sudahSelesai() {
