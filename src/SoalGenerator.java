@@ -4,7 +4,7 @@ public class SoalGenerator {
     public static List<Character> generateRandomLetters() {
         List<Character> alphabet = new ArrayList<>();
 
-        // Menambahkan semua huruf kapital A-Z ke dalam list
+        // Menambahkan semua huruf A-Z (kapital) ke dalam list
         for (char c = 'A'; c <= 'Z'; c++) {
             alphabet.add(c);
         }
@@ -19,6 +19,7 @@ public class SoalGenerator {
     public static void main(String[] args) {
         // Menghasilkan 5 huruf acak tanpa duplikat
         List<Character> grandSoal = generateRandomLetters();
+
         System.out.println(grandSoal);  // Menampilkan grand soal yang dihasilkan
     }
 }

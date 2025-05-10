@@ -16,6 +16,7 @@ public class Soal {
     private String createSoalDenganHilang() {
         Collections.shuffle(grandSoal);  // Acak urutan huruf
         StringBuilder soalBuilder = new StringBuilder();
+
         for (int i = 0; i < 5; i++) {
             if (i == posisiHilang) {
                 soalBuilder.append("_");  // Sembunyikan huruf yang hilang
@@ -29,6 +30,7 @@ public class Soal {
     // Mendapatkan soal asli (5 huruf acak dari grand soal)
     public String getSoal() {
         StringBuilder soalBuilder = new StringBuilder();
+
         for (char huruf : grandSoal) {
             soalBuilder.append(huruf);
         }
