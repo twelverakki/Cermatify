@@ -45,4 +45,6 @@ public class Peserta {
     public int getJumlahPengujian() {
         return jumlahPengujian;
     }
+
+    //
 }
