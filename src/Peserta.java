@@ -38,6 +38,8 @@ public class Peserta {
         return poin;
     }
 
+    //test
+
     public Soal getSoal() {
         return soal;
     }
@@ -46,5 +48,4 @@ public class Peserta {
         return jumlahPengujian;
     }
 
-    //
 }
