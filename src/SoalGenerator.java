@@ -8,7 +8,7 @@ public class SoalGenerator {
         for (char c = 'A'; c <= 'Z'; c++) {
             alphabet.add(c);
         }
-
+        
         // Mengacak huruf-huruf di dalam list
         Collections.shuffle(alphabet);
 
