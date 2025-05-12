@@ -5,10 +5,10 @@ public class SoalGenerator {
         List<Character> alphabet = new ArrayList<>();
 
         // Menambahkan semua huruf A-Z (kapital) ke dalam list
-        for (char c = 'A'; c <= 'Z'; c++) {
-            alphabet.add(c);
+        for (char alpha = 'A'; alpha <= 'Z'; alpha++) {
+            alphabet.add(alpha);
         }
-        
+
         // Mengacak huruf-huruf di dalam list
         Collections.shuffle(alphabet);
 

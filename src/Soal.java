@@ -42,10 +42,10 @@ public class Soal {
         return soalDenganHilang;
     }
 
-    // // Mendapatkan posisi huruf yang hilang
-    // public int getPosisiHilang() {
-    //     return posisiHilang;
-    // }
+    // Mendapatkan posisi huruf yang hilang
+    public int getPosisiHilang() {
+        return posisiHilang;
+    }
 
     // Mengecek apakah jawaban yang diberikan benar
     public boolean cekJawaban(String jawaban) {
