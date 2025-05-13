@@ -5,8 +5,8 @@ public class SoalGenerator {
         List<Character> alphabet = new ArrayList<>();
 
         // Menambahkan semua huruf A-Z (kapital) ke dalam list
-        for (char alpha = 'A'; alpha <= 'Z'; alpha++) {
-            alphabet.add(alpha);
+        for (char c = 'A'; c <= 'Z'; c++) {
+            alphabet.add(c);
         }
 
         // Mengacak huruf-huruf di dalam list
