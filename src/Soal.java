@@ -19,7 +19,7 @@ public class Soal {
 
         for (int i = 0; i < 5; i++) {
             if (i == posisiHilang) {
-                soalBuilder.append("_");  // Sembunyikan huruf yang hilang
+                soalBuilder.append("_");  // Menyembunyikan huruf yang hilang
             } else {
                 soalBuilder.append(grandSoal.get(i));
             }
