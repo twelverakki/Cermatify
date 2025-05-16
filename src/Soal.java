@@ -1,32 +1,48 @@
 import java.util.*;
 
 public class Soal {
-    private List<Character> grandSoal;  // Grand soal yang terdiri dari 5 huruf tetap
+    private List<Character> grandSoal;
     private String soalDenganHilang;
     private int posisiHilang;
+    private char jawaban;
+    private Map<Character, Integer> pilihanMap;
 
-    // Konstruktor yang menghasilkan soal dengan 5 huruf acak dan satu huruf hilang
     public Soal(List<Character> grandSoal) {
-        this.grandSoal = new ArrayList<>(grandSoal);  // Salin grand soal ke dalam list
-        this.posisiHilang = new Random().nextInt(5);  // Pilih posisi huruf yang hilang secara acak
-        this.soalDenganHilang = createSoalDenganHilang();
+        this.grandSoal           = new ArrayList<>(grandSoal);
+        this.posisiHilang        = new Random().nextInt(5);
+        this.jawaban             = grandSoal.get(posisiHilang);
+        this.soalDenganHilang    = createSoalDenganHilang();
+        this.pilihanMap          = createPilihanMap();
     }
 
-    // Membuat soal dengan satu huruf yang hilang
     private String createSoalDenganHilang() {
-        Collections.shuffle(grandSoal);  // Acak urutan huruf
-        StringBuilder soalBuilder = new StringBuilder();
-        for (int i = 0; i < 5; i++) {
-            if (i == posisiHilang) {
-                soalBuilder.append("_");  // Sembunyikan huruf yang hilang
+        List<Character> soalList    = new ArrayList<>(grandSoal);
+        StringBuilder soalBuilder   = new StringBuilder();
+
+        Collections.shuffle(soalList);
+        for (char c : soalList) {
+            if (c == jawaban) {
+                soalBuilder.append("?");
             } else {
-                soalBuilder.append(grandSoal.get(i));
+                soalBuilder.append(c);
             }
         }
+
         return soalBuilder.toString();
     }
 
-    // Mendapatkan soal asli (5 huruf acak dari grand soal)
+    private Map<Character, Integer> createPilihanMap() {
+        Map<Character, Integer> map     = new HashMap<>();
+        List<Character> soalList        = new ArrayList<>(grandSoal);
+
+        Collections.shuffle(soalList);
+        for (int i = 0; i < soalList.size(); i++) {
+            char pilihan = (char) ('A' + i);
+            map.put(pilihan, i);
+        }
+        return map;
+    }
+
     public String getSoal() {
         StringBuilder soalBuilder = new StringBuilder();
         for (char huruf : grandSoal) {
@@ -35,26 +51,14 @@ public class Soal {
         return soalBuilder.toString();
     }
 
-    // Mendapatkan soal dengan huruf yang hilang
     public String getSoalDenganHilang() {
         return soalDenganHilang;
     }
 
-    // Mendapatkan posisi huruf yang hilang
-    public int getPosisiHilang() {
-        return posisiHilang;
-    }
-
-    // Mengecek apakah jawaban yang diberikan benar
-    public boolean cekJawaban(String jawaban) {
-        // Jawaban yang benar adalah huruf yang hilang berdasarkan posisi yang benar
-        switch (posisiHilang) {
-            case 0: return "A".equals(jawaban);  // Grand soal: U
-            case 1: return "B".equals(jawaban);  // Grand soal: K
-            case 2: return "C".equals(jawaban);  // Grand soal: W
-            case 3: return "D".equals(jawaban);  // Grand soal: E
-            case 4: return "E".equals(jawaban);  // Grand soal: L
-            default: return false;
-        }
+    public boolean cekJawaban(String jawabanUser) {
+        char jawabanChar        = jawabanUser.charAt(0);
+        Integer posisiJawaban   = pilihanMap.get(jawabanChar);
+        
+        return posisiJawaban != null && grandSoal.get(posisiJawaban) == jawaban;
     }
 }

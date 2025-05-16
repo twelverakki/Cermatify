@@ -58,5 +58,6 @@ public class Main {
             if (path.endsWith(".css")) return "text/css";
             return "application/octet-stream";
         }
+
     }
 }

@@ -1,6 +1,5 @@
 import com.sun.net.httpserver.*;
 import java.io.*;
-import java.util.*;
 
 public class SoalHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
@@ -20,7 +19,7 @@ public class SoalHandler implements HttpHandler {
             return;
         }
 
-        // Mengambil soal dengan huruf yang hilang.
+        // Mengambil soal dengan huruf yang sudah hilang
         String soalDenganHilang = soal.getSoalDenganHilang();
 
         // Menyajikan soal dan pilihan jawaban.

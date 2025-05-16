@@ -40,6 +40,6 @@ public class StaticHandler implements HttpHandler {
         if (path.endsWith(".js")) return "application/javascript";
         if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
         if (path.endsWith(".png")) return "image/png";
-        return "application/octet-stream";  // Default untuk file lain
+        return "application/octet-stream";  // Defaultnya untuk file lain
     }
 }
