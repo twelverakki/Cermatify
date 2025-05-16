@@ -18,7 +18,7 @@ Aplikasi ini memungkinkan pengguna menjawab soal, mengirimkan jawaban, dan melih
 | Nama Class         | Deskripsi                                                                |
 | ------------------ | ------------------------------------------------------------------------ |
 | `Main`             | Kelas utama yang menjalankan HTTP server dan mendaftarkan semua handler. |
-| `StaticHandler`    | Menyediakan file statis (HTML/CSS) dari direktori lokal.              |
+| `StaticHandler`    | Menyediakan file statis (HTML/CSS) dari direktori lokal.                 |
 | `FormHandler`      | Menyediakan form input nama peserta.                                     |
 | `HTMLGenerator`    | Menghasilkan HTML untuk soal, form, hasil, dan leaderboard.              |
 | `JawabSoalHandler` | Menerima jawaban peserta dan menghitung skor.                            |
@@ -54,6 +54,7 @@ java src/Main.java
 Aplikasi berjalan di `http://localhost:8080/`.
 
 ### Fitur tambahan andalan
+
 Aplikasi bisa diakses oleh public dengan menggunakan ip dari perangkat yang menjalan program dengan syarat terhubung dalam satu jaringan. Akses URL berikut pada browser perangkat lain:
 
 `http://[IPv4 perangkat]:8080`
@@ -79,19 +80,19 @@ Aplikasi bisa diakses oleh public dengan menggunakan ip dari perangkat yang menj
 
 ### Halaman Form Nama:
 
-![Input Nama](img\nama.jpg)
+![Input Nama](img/nama.jpg)
 
 ### Halaman Awal:
 
-![Welcome](img\welcome.jpg)
+![Welcome](img/welcome.jpg)
 
 ### Halaman Soal:
 
-![Soal Kuis](img\soal.jpg)
+![Soal Kuis](img/soal.jpg)
 
 ### Hasil Setelah Submit:
 
-![Hasil Kuis](img\hasil.jpg)
+![Hasil Kuis](img/hasil.jpg)
 
 ### Leaderboard:
 
