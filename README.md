@@ -96,7 +96,7 @@ Aplikasi bisa diakses oleh public dengan menggunakan ip dari perangkat yang menj
 
 ### Leaderboard:
 
-![Rank Kuis](img\leader.jpg)
+![Rank Kuis](img/leader.jpg)
 
 ## 📂 Catatan Tambahan
 
