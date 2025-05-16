@@ -20,10 +20,10 @@ public class SoalHandler implements HttpHandler {
             return;
         }
 
-        // Mengambil soal dengan huruf yang hilang
+        // Mengambil soal dengan huruf yang hilang.
         String soalDenganHilang = soal.getSoalDenganHilang();
 
-        // Menyajikan soal dan pilihan jawaban
+        // Menyajikan soal dan pilihan jawaban.
         String response = "<html><body>"
                 + "<h1>Soal Pengujian " + (peserta.getJumlahPengujian() + 1) + "</h1>"
                 + "<p>Soal: " + soal.getSoal() + "</p>"
