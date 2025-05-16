@@ -79,7 +79,7 @@ Aplikasi bisa diakses oleh public dengan menggunakan ip dari perangkat yang menj
 
 ### Halaman Form Nama:
 
-![Input Nama](img\nama.jpg)
+![Input Nama](img/nama.jpg)
 
 ### Halaman Awal:
 
