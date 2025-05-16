@@ -18,7 +18,7 @@ Aplikasi ini memungkinkan pengguna menjawab soal, mengirimkan jawaban, dan melih
 | Nama Class         | Deskripsi                                                                |
 | ------------------ | ------------------------------------------------------------------------ |
 | `Main`             | Kelas utama yang menjalankan HTTP server dan mendaftarkan semua handler. |
-| `StaticHandler`    | Menyediakan file statis (HTML/CSS/JS) dari direktori lokal.              |
+| `StaticHandler`    | Menyediakan file statis (HTML/CSS) dari direktori lokal.              |
 | `FormHandler`      | Menyediakan form input nama peserta.                                     |
 | `HTMLGenerator`    | Menghasilkan HTML untuk soal, form, hasil, dan leaderboard.              |
 | `JawabSoalHandler` | Menerima jawaban peserta dan menghitung skor.                            |
@@ -53,12 +53,17 @@ java src/Main.java
 
 Aplikasi berjalan di `http://localhost:8080/`.
 
+### Fitur tambahan andalan
+Aplikasi bisa diakses oleh public dengan menggunakan ip dari perangkat yang menjalan program dengan syarat terhubung dalam satu jaringan. Akses URL berikut pada browser perangkat lain:
+
+`http://[IPv4 perangkat]:8080`
+
 ## 🛠️ Teknologi yang Digunakan
 
 -   Bahasa Pemrograman: Java
 -   HTTP Server: `com.sun.net.httpserver.HttpServer`
--   HTML Dinamis: Dibuat melalui Java StringBuilder
--   Penyimpanan data: In-memory (ArrayList/Peserta)
+-   HTML Dinamis: Dibuat melalui Java
+-   Penyimpanan data: File data.csv
 
 ## 👥 Pembagian Tugas per Anggota
 
@@ -95,8 +100,7 @@ Aplikasi berjalan di `http://localhost:8080/`.
 ## 📂 Catatan Tambahan
 
 -   Semua file `.java` harus berada dalam satu folder.
--   Tambahkan folder `/static` jika ingin menaruh file HTML/CSS eksternal.
--   Saat ini data peserta disimpan hanya selama server berjalan (tidak persist).
+-   Class Main dijalankan dari folder utama.
 
 ## 📄 Lisensi
 
